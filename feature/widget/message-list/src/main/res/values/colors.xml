@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="message_list_widget_header_background">#737373</color>
-    <color name="message_list_widget_header_text">#e4e4e4</color>
+    <color name="message_list_widget_header_background">#00737373</color>
+    <color name="message_list_widget_header_text_or">#e4e4e4</color>
+    <color name="message_list_widget_header_text">#FFFFFF</color>
     <color name="message_list_widget_divider">#e5e5e5</color>
-    <color name="message_list_widget_text_read">#444444</color>
-    <color name="message_list_widget_text_unread">#000000</color>
+    <color name="message_list_widget_text_read_or">#444444</color>
+    <color name="message_list_widget_text_unread_or">#000000</color>
+    <color name="message_list_widget_text_read">#7F7F7F</color>
+    <color name="message_list_widget_text_unread">#FFFFFF</color>
 </resources>
