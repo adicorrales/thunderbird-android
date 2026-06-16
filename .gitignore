@@ -20,6 +20,8 @@ out/
 *.ap_
 *.class
 *.dex
+*.dm
+output-metadata.json
 
 # Keystore files
 *.jks
