@@ -82,6 +82,12 @@ android {
     }
 
     signingConfigs {
+        getByName("debug") {
+            storeFile = file("C:\\Users\\adico\\OneDrive\\AndroidStudio\\Android Key\\ACM Key.jks")
+            storePassword = "13017723"
+            keyAlias = "acm_key"
+            keyPassword = "13017723"
+        }
         createSigningConfig(project, SigningType.K9_RELEASE, isUpload = false)
     }
 
@@ -90,8 +96,10 @@ android {
             .map(String::toBoolean)
             .orElse(false)
         release {
-            signingConfig = signingConfigs.getByType(SigningType.K9_RELEASE)
 
+            signingConfig = signingConfigs.getByName("debug")
+            isMinifyEnabled = !isCI
+            isShrinkResources = !isCI
             isMinifyEnabled = !isCI.get()
             isShrinkResources = !isCI.get()
 
