@@ -98,8 +98,6 @@ android {
         release {
 
             signingConfig = signingConfigs.getByName("debug")
-            isMinifyEnabled = !isCI
-            isShrinkResources = !isCI
             isMinifyEnabled = !isCI.get()
             isShrinkResources = !isCI.get()
 
