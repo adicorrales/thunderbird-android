@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 // Thunderbird for Android
 rootProject.name = "tfa"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
@@ -5,15 +7,16 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     includeBuild("build-plugin")
     repositories {
+        gradlePluginPortal()
         google {
             mavenContent {
                 includeGroupAndSubgroups("androidx")
                 includeGroupAndSubgroups("com.android")
                 includeGroupAndSubgroups("com.google")
+                excludeGroupAndSubgroups("com.google.devtools.ksp")
             }
         }
         mavenCentral()
-        gradlePluginPortal()
     }
 }
 
@@ -29,6 +32,7 @@ dependencyResolutionManagement {
                 includeGroupAndSubgroups("androidx")
                 includeGroupAndSubgroups("com.android")
                 includeGroupAndSubgroups("com.google")
+                excludeGroupAndSubgroups("com.google.devtools.ksp")
             }
         }
         maven(url = "https://maven.mozilla.org/maven2") {
